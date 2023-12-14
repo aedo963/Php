@@ -2,7 +2,7 @@
 
 class Persona2
 {
-    protected $tipoDocumento;
+    protected $tipoDocumento = "DNI";
     protected $numeroDocumento;
     protected $regimenTributario;
     protected $nombre;
@@ -10,6 +10,12 @@ class Persona2
     protected $apellidoMaterno;
     protected $fechaNacimiento;
     protected $correo;
+
+
+    function print()
+    {
+        echo "Hola desde Persona2";
+    }
 
 
     /**

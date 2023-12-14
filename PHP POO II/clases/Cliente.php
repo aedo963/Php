@@ -1,7 +1,23 @@
 <?php
 
-class Cliente extends Persona2
+class Cliente implements IMetodosCliente
+//extends Persona2
 {
+
+    function comprar($producto)
+    {
+    }
+
+    function registrarseEnLaTiendaEnLinea()
+    {
+    }
+
+
+    /* public function print()
+    {
+        echo "Hola desde Cliente";
+    } */
+
 
     # Sobreescritura del metodo getNombre
     # Le estamos dando un comportamiento diferente al que tiene en la clase Persona2
@@ -11,11 +27,11 @@ class Cliente extends Persona2
     } */
 
     # Sobreescritura tomando en cuenta su funcionamiento original
-    public function getNombre()
+    /*  public function getNombre()
     {
         # Agregando funcionalidad extra
         echo "El nombre del cliente es: ";
         # Copiando el mismo funcionamiento original
         return parent::getNombre();
-    }
+    } */
 }
