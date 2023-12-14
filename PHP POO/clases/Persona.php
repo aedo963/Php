@@ -7,10 +7,18 @@ class Persona
     private $nombre, $apellidos, $numeroTelefonico;
 
 
+    function __construct($nombreParametro, $apellidosParametro, $numeroTelefonicoParametro)
+    {
+        $this->nombre = $nombreParametro;
+        $this->apellidos = $apellidosParametro;
+        $this->numeroTelefonico = $numeroTelefonicoParametro;
+    }
+
+
     # Getter: Retornar los valores de las propiedades
     public function getNombre()
     {
-        return $this->nombre;
+        return  strtolower($this->nombre);
     }
 
     public function getApellidos()
@@ -31,7 +39,7 @@ class Persona
 
     public function setNombre(string $nombreParametro)
     {
-        $this->nombre = $nombreParametro;
+        $this->nombre = strtolower($nombreParametro);
     }
 
     public function setApellidos(string $apellidosParametro)
